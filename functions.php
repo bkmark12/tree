@@ -8,9 +8,9 @@
 
     add_action('wp_enqueue_scripts','load_css');
         
-// set javascript file
+// set javascript file  - cannot find/load the file???!
     function script_js(){
-        wp_enqueue_script('scrip_java', get_template_directory_uri(). '/main.js', array(), "1.0", true);
+        wp_enqueue_script('scrip_java', get_template_directory_uri(). "/main.js", array(), "1.0", true);
     }
     
     add_action('wp_enqueue_scripts','script_js');
@@ -25,7 +25,8 @@
     );
 
 
-$image1 = 'src="https://littleexplorersplaygroup.co.uk/tree/wp-content/themes/TreeTheme/img/Image_1.png"';
-$image2 = 'src="https://littleexplorersplaygroup.co.uk/tree/wp-content/themes/TreeTheme/img/Image_2.png"';
+$image1 = 'data-src="https://littleexplorersplaygroup.co.uk/tree/wp-content/themes/TreeTheme/img/Image_1.png"';
+//$image2 = 'data-src="https://littleexplorersplaygroup.co.uk/tree/wp-content/themes/TreeTheme/img/Image_2.png"';
 
 ?>
+
